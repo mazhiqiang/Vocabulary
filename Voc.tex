@@ -1,16 +1,44 @@
 \documentclass[utf8]{article}
 \usepackage{xcolor}
-
+% ================= 设置版面，A4 页面高 29.7cm, 宽 21.0cm ================ %
+% 1英寸(inch) = 2.54 cm
+% 水平左边空距，默认为 1in + \hoffset %
+\setlength{\hoffset}{-0.54cm}
+% 垂直上边空距，默认为 1in + \voffset %
+\setlength{\voffset}{-0.54cm}
+% 纸张内侧边界: 水平边空距 + \oddsidemargin (奇数页的左边界) = 2.00cm %
+\setlength{\oddsidemargin}{0cm}
+% 纸张外侧边界: 水平边空距 + \evensidemargin (偶数页的左边界) = 2.00cm %
+\setlength{\evensidemargin}{0cm}
+% 版心 17.0cm + 内侧边界 2.00cm + 外侧边界 2.00cm = 21.0cm %
+\setlength{\textwidth}{17.0cm}
+% 上页边到页眉的距离 %
+\setlength{\topmargin}{0.90cm}
+% 标题行高度 %
+\setlength{\headheight}{0.55cm}
+% 正文到标题的间距 %
+\setlength{\headsep}{0.45cm}
+% 正文底部到页脚距离 %
+\setlength{\footskip}{0.90cm}
+% 版心高度 22.90cm + 上页边空距 2.00cm + 页边页眉距 0.90cm + 标题行高 0.55cm %
+%         + 正文标题距 0.45cm + 正文页脚距 0.90cm + 下页边空距 2.00 = 29.70cm %
+\setlength{\textheight}{22.90cm}
+% ============================================================================== %
+\renewcommand{\baselinestretch}{0}                                % 行距
+\setlength{\parskip}{2.0ex plus0.1ex minus0.2ex}                 % 段落间距
+%\setlength{textwidth}{400pt}
 \begin{document}
 
 
 \begin{flushright}
-The sentence following is used for vocabulary recording.\\ 
+The sentence following is used for vocabulary recording.\\
 \today\\
 \end{flushright}
-\begin{enumerate}
-\item The authorities have \textcolor{red}{abandoned} any attempt to distribute food in an orderly fashion.
-\item The creators of the original X--man abbreviated the title of its sequel of simple X2.
-\end{enumerate}
 
+\begin{flushleft}
+\begin{enumerate}
+\item The authorities have \textcolor{red}{\textit{abandoned}} any attempt to distribute food in an orderly fashion.
+\item The creators of the original X-man \textcolor{red}{\textit{abbreviated}} the title of its sequel of simple X2.
+\end{enumerate}
+\end{flushleft}
 \end{document}
